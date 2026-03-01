@@ -1,0 +1,723 @@
+/* ==========================================================================
+   ÍNDICE DE ESTILOS - SITIO WEB PORTAFOLIO
+==========================================================================
+   1.  RESET Y ESTILOS BASE .......... (Configuración global)
+   2.  COMPONENTES GLOBALES .......... (Header, Navbar y Footer)
+   3.  PÁGINA DE INICIO (HERO) ....... (Texto izquierda, foto derecha)
+   4.  PÁGINA DE PORTFOLIO ........... (Grid, tarjetas, miniaturas)
+   5.  PÁGINA DE PRESUPUESTOS ........ (Campos, botones de envío)
+   6.  PÁGINA DE CONTACTO ............ (Iconos, colores de marca)
+   7.  PÁGINA DE AVISO LEGAL.......... (Información legal)
+   8.  MEDIA QUERIES ................. (Ajustes para móviles)
+   9.  LOGOTIPO....................... (Estilo del logotipo de la web)
+==========================================================================
+*/
+
+
+/* ==========================================
+   1.  RESET Y ESTILOS BASE
+   ========================================== */
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+
+/* ==========================================
+   2. COMPONENTES GLOBALES (Header, Navbar y Footer)
+   ========================================== */
+    /* BODY */
+    body{
+        background-color: bisque;
+    }
+
+    /* HEADER */
+    header{
+        width: 100%;
+        margin: 0 auto;/* Para que se quede centrada la página */
+    }
+
+    .header-container{
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #C58C5D;
+        font-size: 140%;
+        color: #753907;
+    }
+
+
+    /* BARRA DE NAVEGACIÓN */
+    .navbar{
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;/* Centra el menú horizontalmente */
+        padding-top: 0px;
+        background-color: #C58C5D;
+    }
+
+    .navbar ul{
+        display: flex; /* Elementos en horizontal */
+        list-style: none; /* Quita los puntos */
+        margin: 0px;
+        padding: 8px 20px;
+        max-width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        gap: 70px;
+    }
+
+    /* Enlaces */
+    .navbar li{
+        margin: 10px 20px;/* Espacio entre palabras */
+        background: bisque;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border-radius: 1px solid;
+        transition: 0.3s;
+    }
+
+    /* Ajustamos el padding del enlace */
+    .navbar a{
+        display: block;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 20px;
+        color: #753907;
+        font-size: 130%;
+    }
+
+    /* Estilo para resaltar en que enlace estas */
+    .navbar a.active{
+        color: #753907;
+        font-weight: bold;/* Texto en negrita */
+        border-bottom: 5px solid #753907;/* Una linea debajo para resaltar */
+    }
+
+    /* Estilo para resaltar cuando pasas el ratón por encima */
+    .navbar a:hover{
+        color: #6C5C5C;
+        font-weight: 700;
+    }
+
+
+    /* FOOTER */
+    footer{
+        width: 100%;
+        min-height: 50px;
+        text-align: center;
+        background-color: #C58C5D;
+        color: #753907;
+        font-size: 15px;
+    }
+
+    .footer-social{
+        padding: 10px 0px;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    /* Tamaño al h4 */
+    .footer-social h4{
+        margin-bottom: 15px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    /* Contenedor de los iconos */
+    .social-icons{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* Estilo a los iconos */
+    .social-icons a{
+        text-decoration: none;
+        font-size: 24px;
+        transition: 0.4s;
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Colores originales de los iconos de las redes sociales */
+    .fa-facebook{
+        color: #1877F2;
+    }
+    .fa-instagram{
+        color: #E4405F;
+    }
+    .fa-github{
+        color: #333333;
+    }
+
+    /* Efecto al pasar el ratón por encima de los iconos */
+    .social-icons a:hover{
+        transform: scale(1.0); /* Se hacen más grandes */
+        filter: brightness(1.2); /* Se iluminan un poco */
+    }
+
+    /* Dirección de la empresa */
+    .footer-address{
+        margin-bottom: 10px;
+        justify-content: center;
+        max-width: 100%;
+    }
+
+    /* H4 */
+    .footer-address h4{
+        margin-bottom: 5px;
+        font-size: 17px;
+        font-weight: bold;
+    }
+    .footer-address address{
+        font-style: oblique;
+        font-size: 15px;
+    }
+
+    /* Aviso legal */
+    .footer-content{
+        font-size: 14px;
+    }
+
+
+
+
+/* ==========================================
+   3.  PÁGINA DE INICIO
+   ========================================== */
+
+   /* MAIN */
+   /* Configuración de la seccion Hero */
+   section{
+    padding: 60px 20px;
+    margin-bottom: 20px; /* Espacio real entre bloques */
+    background: #FFECDC;
+    border-radius: 10%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); /* Sombra muy sutil */
+   }
+
+/* O una línea corta y centrada debajo del título de cada sección */
+section h3::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 4px;
+    background-color: #C58C5D; /* Tu color café */
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+   .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    gap: 50px;
+   }
+
+   /* Diseño del texto del div */
+   .hero-text{
+    text-align: center;
+    padding: 15px 20px;
+   }
+   .hero-text h2{
+    font-size: 160%;
+    margin-bottom: 5px;
+   }
+   .hero-text p{
+    margin-top: 20px;
+   }
+
+   /* Diseño de la caricatura */
+   .hero-image{
+    /* Forzamos las medidas de ancho y alto */
+    width: 250px;
+    height: 250px;
+    /* Evitamos que la caricatura se estire o se vea mal */
+    object-fit: cover;
+    border-radius: 50%;
+    /* Para que sea un círculo */
+    border-radius: 5px solid #753907;
+    box-shadow: 0 5px 15px #753907;
+   }
+
+   /* Diseño de la parte de la seccion de nuestros servicios */
+   /* Contenedor Principal */
+.section-services {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-services h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+}
+
+/* Limitamos el ancho del div-services para que las tarjetas no se estiren */
+.div-services {
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+.grid-services {
+    display: grid;
+    /* Creamos columnas que no bajen de 300px pero que quepan en el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start; /* Evita que las tarjetas se estiren para igualar a la más larga */
+}
+
+/* Estilo de la Tarjeta */
+.item-services {
+    background: #faf6f6;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    text-align: left; /* Alineación formal del texto */
+}
+
+.item-services:hover {
+    transform: translateY(-5px);
+    border-color: #753907;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.item-services h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.item-services p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Sección de especialidades */
+.section-specialties {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.container-specialties {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.section-specialties h2 {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.grid-specialties {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.specialty-card {
+    background: #fdfdfd;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.specialty-card:hover {
+    background: #f8faff;
+    border-color: #1a1a1a;
+}
+
+.specialty-header h4 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de etiquetas */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Estilo de las etiquetas (Tags) */
+.tag {
+    background: #e9ecef;
+    color: #753907;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    background: #C58C5D;
+    color: #fff;
+}
+
+
+
+
+/* ==========================================
+   4.  PÁGINA DE PORTFOLIO
+   ========================================== */
+   .portfolio-gallery {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.grid-portfolio {
+    display: grid;
+    /* Esto crea la cuadrícula automática de miniaturas */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden; /* Para que la imagen no se salga de las esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-bottom: 2px solid #C58C5D;
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    color: #753907;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+
+
+
+/* ==========================================
+   5.  PÁGINA DE PRESUPUESTOS
+   ========================================== */
+   .section-presupuesto {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #FFECDC;
+    border-radius: 15px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #753907;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #753907;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #C58C5D;
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical; /* Permite al usuario agrandar solo hacia abajo */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-enviar {
+    background-color: #753907;
+    color: bisque;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-enviar:hover {
+    background-color: #C58C5D;
+    color: #753907;
+}
+
+
+
+
+
+/* ==========================================
+   6.  PÁGINA DE CONTACTO
+   ========================================== */
+   .section-contacto-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background: #FFECDC;
+    border-radius: 15px;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.map-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #C58C5D;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.info-block {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /*Alinea todo a la izquierda*/
+}
+
+.info-block h3 {
+    color: #753907;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono con el texto del título */
+    gap: 12px;
+    width: 100%;
+}
+/* Estilo para el icono que actúa como guía visual */
+.info-block h3 i {
+    color: #C58C5D;
+    font-size: 1.2rem;
+    width: 20px; /* Ancho fijo para que todos los textos empiecen en el mismo punto */
+    text-align: center;
+}
+
+/* Alineación del contenido (p y address) respecto al título */
+.info-block p, 
+.info-block address {
+    margin-left: 32px; /* Espacio exacto para que el texto coincida con el inicio del título (20px icono + 12px gap) */
+    line-height: 1.6;
+    color: #555;
+    font-style: normal;
+    text-align: left;
+}
+.info-block i {
+    color: #C58C5D;
+}
+
+.info-block a {
+    color: #753907;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-block a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   7. PÁGINA DE AVISO LEGAL
+   ========================================== */
+
+   .legal-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #FFECDC;
+    border-radius: 15px;
+    text-align: left; /* El texto legal siempre a la izquierda */
+}
+
+.legal-container h2 {
+    color: #753907;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.legal-content h3 {
+    color: #C58C5D;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.legal-content p, .legal-content ul {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.legal-content ul {
+    list-style: square;
+    margin-left: 20px;
+}
+
+
+
+
+/* ==========================================
+   8.  MEDIA QUERIES
+   ========================================== */
+
+    /* TABLETS (Pantallas medianas) */
+    @media (max-width: 991px) {
+    /* Ajustamos el Hero para que no se vea apretado */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        order: 2; /* Ponemos el texto debajo de la imagen en móviles */
+    }
+
+    .hero-image {
+        order: 1;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Ajuste para las secciones de servicios y portfolio */
+    .grid-services, .grid-specialties, .grid-portfolio {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 0 10px;
+    }
+}
+
+/* MÓVILES (Pantallas pequeñas) */
+    @media (max-width: 580px) {
+    /* El Header y Navbar */
+    .header-container {
+        height: 150px;
+        font-size: 110%;
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Menú en lista vertical */
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+        width: 100%; /* Botones del menú a lo ancho */
+    }
+
+    .navbar a {
+        text-align: center;
+    }
+
+    /* Ajuste de márgenes en secciones */
+    section {
+        padding: 40px 15px;
+        border-radius: 0; /* Quitamos redondeado en móvil para ganar espacio */
+    }
+
+    /* Formulario de presupuesto */
+    .section-presupuesto {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    /* Grid de contacto (Mapa y datos uno debajo del otro) */
+    .contacto-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================
+   9.  ESTILO DEL LOGOTIPO
+   ========================================== */
+
+/* Estilo del Logotipo de Texto */
+.logo-text {
+    text-decoration: none;
+    color: #753907; /* Tu color café oscuro */
+    font-family: 'Courier New', Courier, monospace; /* Fuente tipo código */
+    font-weight: 800;
+    letter-spacing: -1px;
+    transition: 0.3s;
+}
+
+/* El "dev" en otro color para darle toque de programadora */
+.logo-text span {
+    color: #C58C5D; /* Tu color café claro */
+    background: #753907;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.logo-text:hover {
+    filter: brightness(1.2);
+}
