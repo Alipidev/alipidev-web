@@ -30,6 +30,14 @@
     /* BODY */
     body{
         background-color: bisque;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MAIN */
+    main{
+        flex: 1;
     }
 
     /* HEADER */

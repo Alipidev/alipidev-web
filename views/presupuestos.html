@@ -37,18 +37,20 @@
     <main>
         <section class="section-presupuesto">
             <h2>Solicitud de presupuesto</h2>
-        <form action="#" method="post">
+        <form>
             <fieldset>
                 <legend>Datos Personales</legend>
 
                 <label for="name">Nombre</label>
-                <input type="text" name="name"  id="name" placeholder="Introduzca su nombre" required>
+                <input type="text" name="name"  id="name" placeholder="Introduzca su nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúñÑ ]{2,40}" 
+                    title="El nombre solo puede contener letras y espacios" required>
 
                 <label for="correo">Correo electrónico</label>
-                <input type="email" name="correo" id="correo" placeholder="Introduzca su correo electrónico" required>
+                 <input type="email" name="correo" id="correo" placeholder="Introduzca su correo electrónico" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Introduzca un correo válido" required>
 
                 <label for="phone">Teléfono móvil</label>
-                <input type="tel" name="phone" id="phone" placeholder="Introduzca su número de móvil" required>
+                <input type="tel" name="phone" id="phone" placeholder="Introduzca su número de móvil" pattern="[0-9]{9}"
+                    title="El teléfono debe tener 9 números" required>
 
                 <label for="comentario">Solicite más información</label>
                 <textarea name="comentario" id="comentario" rows="5" placeholder="Cuéntanos más sobre tu proyecto..." required></textarea>
@@ -66,7 +68,7 @@
     <footer>
         <!-- Iconos de redes sociales -->
         <div class="footer-social">
-            <h4>Síguenos</h4>
+            <h3>Síguenos</h3>
             <div class="social-icons">
                 <a href="https://facebook.com" target="_blank" aria-label="Facebook">
                     <i class="fa-brands fa-facebook"></i>
@@ -82,7 +84,7 @@
 
         <!-- Dirección de la empresa -->
          <div class="footer-address">
-            <h4>Nuestra sede</h4>
+            <h3>Nuestra sede</h3>
             <address>
                 Carretera Malilla <br>
                 46026 Valencia, España
