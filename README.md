@@ -31,4 +31,4 @@ El proyecto Alipidev es un sitio web de portafolio diseñado para Alina Puscas, 
 - Frameworks modernos para un desarrollo eficiente
 
 ## Información de Contacto
-Para consultas y oportunidades laborales, Alina Puscas puede ser contactada a través de su correo electrónico: alina.puscas@example.com
+Para consultas y oportunidades laborales, Alina Puscas puede ser contactada a través de su correo electrónico: a.puskis@gmail.com
