@@ -1,6 +1,9 @@
+// Detecta si estamos en una subcarpeta
+const base = window.location.pathname.includes('/views/') ? '../' : '';
+
 // Función para cargar el footer
 function cargarComponente(archivo, idDestino, callback){
-    fetch(archivo)
+    fetch(base + archivo)
         .then(function(respuesta){
             return respuesta.text();
         })
