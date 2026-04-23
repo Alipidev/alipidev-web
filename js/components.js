@@ -15,4 +15,4 @@ function cargarComponente(archivo, idDestino, callback){
         });
 }
 
-cargarComponente('/components/footer.html','mi-footer');
+cargarComponente('components/footer.html','mi-footer');
